@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name ngZenefitsNotesApp
+ * @name takeNoteApp
  * @description
- * # ngZenefitsNotesApp
+ * # takeNoteApp
  *
  * Main module of the application.
  */
 angular
-    .module('ngZenefitsNotesApp', [
+    .module('takeNoteApp', [
         'ngAnimate',
         'ngCookies',
         'ngResource',

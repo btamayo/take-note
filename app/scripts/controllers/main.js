@@ -7,7 +7,7 @@
  * # MainCtrl
  * Controller of the ngZenefitsNotesApp
  */
-angular.module('ngZenefitsNotesApp')
+angular.module('takeNoteApp')
 .controller('MainCtrl', function($scope) {
     $scope.notes = [];
 

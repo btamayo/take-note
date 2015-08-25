@@ -1,5 +1,5 @@
 {
-  "name": "ngzenefitsnotes",
+  "name": "takeNoteApp",
   "private": true,
   "devDependencies": {
     "grunt": "^0.4.5",
