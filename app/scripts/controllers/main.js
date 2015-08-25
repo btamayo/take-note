@@ -51,6 +51,7 @@ angular.module('ngZenefitsNotesApp')
     
     $scope.onCancelEditButton = function(note) {
         note.editMode = !note.editMode;
+        note.deleteMode = false;
     }
     
     $scope.onDeleteButtonClicked = function(note) {
