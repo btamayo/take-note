@@ -12,6 +12,6 @@ This app uses browser localStorage to store your notes.
 
 
 ### Third-party libraries:
-Built with: Angular.js, jQuery, Moment.js, and Bootstrap
+Built with: Angular.js, jQuery, Moment.js, and Bootstrap. Compiled with Grunt.
 
 
