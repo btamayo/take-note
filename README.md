@@ -1,12 +1,17 @@
 # take-note
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.12.1.
+Client-side app for note-taking. Built on Angular.js
 
-## Build & development
+## Using the app:
 
-Run `grunt` for building and `grunt serve` for preview.
+Open `dist/index.html` to open the app.
+Create a note using the text field, and click 'Save' to save it. 
+To delete a note, click 'Edit', then 'Delete'. Confirm your deletion.
 
-## Testing
+This app uses browser localStorage to store your notes.
 
-Running `grunt test` will run the unit tests with karma.
+
+### Third-party libraries:
+Built with: Angular.js, jQuery, Moment.js, and Bootstrap
+
+
