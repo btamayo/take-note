@@ -1,0 +1,27 @@
+
+<div class="container main-container">
+  <h2 class="center">Note Taker</h2><br/>
+  <h4>Create a Note</h4>
+  <div class="row">
+    <div class="col-xs-12 new-note">
+      <textarea id="newNote" type="text" placeholder="Start typing your note" rows="2" class="form-control"></textarea>
+      <div class="right"><a ng-click="onSaveButtonClick()" class="btn btn-default">Save</a></div>
+    </div>
+  </div>
+  <h4>Saved Notes</h4>
+  <div ng-show="notes.length === 0" class="empty-list">No notes saved yet!</div>
+  <div ng-repeat="note in notes | reverse" class="notes-list">
+    <div class="note">
+      <div ng-show="note.editMode" class="note-textfield">
+        <textarea type="text" rows="2" ng-model="note._text" class="form-control"></textarea>
+      </div>
+      <div ng-show="!note.editMode" class="note-text">{{ note.text }}        </div>
+      <div class="note-buttons row">
+        <div class="col-xs-12 col-sm-5 last-saved"><small class="text-light">
+             
+            Last saved: <br/>{{ note.date }}</small></div>
+        <div class="col-xs-12 col-sm-7 right"><a ng-click="onCancelEditButton(note)" ng-show="note.editMode" class="cancel-button">Cancel</a><a ng-show="note.editMode &amp;&amp; !note.deleteMode" ng-click="onDeleteButtonClicked(note)" class="btn btn-danger btn-small">Delete</a><a ng-show="note.editMode &amp;&amp; note.deleteMode" ng-click="onDeleteButtonClicked(note)" class="btn btn-link">Back</a><a ng-show="note.editMode &amp;&amp; note.deleteMode" ng-click="onConfirmDeleteButtonClicked(note)" class="btn btn-danger btn-small">Confirm Delete</a><a ng-hide="note.deleteMode" ng-click="onEditButtonClick(note, note._text)" class="btn btn-default btn-small">{{ note.editMode ? 'Save' : 'Edit' }}</a></div>
+      </div>
+    </div>
+  </div>
+</div>

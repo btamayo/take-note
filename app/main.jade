@@ -1,0 +1,32 @@
+.container.main-container
+  h2.center Note Taker
+  br
+  h4 Create a Note
+  .row
+    .col-xs-12.new-note
+      textarea#newNote.form-control(type='text', placeholder='Start typing your note', rows='2')
+      .right
+        a.btn.btn-default(ng-click='onSaveButtonClick()') Save
+      
+  h4 Saved Notes
+  .empty-list(ng-show='notes.length === 0')
+    | No notes saved yet!
+  .notes-list(ng-repeat='note in notes | reverse')
+    .note
+      .note-textfield(ng-show='note.editMode')
+        textarea.form-control(type='text', rows='2', ng-model='note._text')
+      .note-text(ng-show='!note.editMode')
+        {{ note.text }}        
+      .note-buttons.row
+        .col-xs-12.col-sm-5.last-saved
+          small.text-light 
+            | Last saved: 
+            br
+            {{ note.date }}
+        .col-xs-12.col-sm-7.right
+          a.cancel-button(ng-click='onCancelEditButton(note)' ng-show='note.editMode') Cancel
+          a.btn.btn-danger.btn-small(ng-show='note.editMode && !note.deleteMode' ng-click='onDeleteButtonClicked(note)') Delete
+          a.btn.btn-link(ng-show='note.editMode && note.deleteMode' ng-click='onDeleteButtonClicked(note)') Back
+          a.btn.btn-danger.btn-small(ng-show='note.editMode && note.deleteMode' ng-click='onConfirmDeleteButtonClicked(note)') Confirm Delete
+          a.btn.btn-default.btn-small(ng-hide='note.deleteMode' ng-click='onEditButtonClick(note, note._text)') {{ note.editMode ? 'Save' : 'Edit' }}
+          
