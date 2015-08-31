@@ -1,6 +1,7 @@
 # take-note
 
-Client-side app for note-taking. Built on Angular.js
+Coding exercise: Build a client-side only note-taking app that allows a user to add, edit, delete, and view notes. Store on localstorage.
+Built on Angular.js
 
 ## Using the app:
 
